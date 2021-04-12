@@ -1,7 +1,7 @@
 # EADS
 Algorithms &amp; Data Structures course projects
 
-## Project 1 
+## List - Project 1 
 Single-linked list of elements. Elements store information about two different data types (integer “key” and character “info”). The main purpose of the task was to design a function “Split” which divides one single-linked list, into two separate lists under set conditions. 
 
 ###### Testing:
@@ -22,4 +22,19 @@ a. Until repetitions of copying elements work for both result lists
 b. When nodes are copied only into the first list
 c. When nodes are copied only into the second lis
 
-## Project 2
+## AVL tree dictionary - Project 3
+Project contains from two files. First one “dictionary.h” contains all used classes and structures with implementation of it’s methods. The second one “main.cpp” is a file with testing operations. Such design was an experiment to obtain less number of files and less number of lines of the code. 
+
+I used 3 classes and one structure:
+-class Dictionary
+-friend class DictionaryException
+-friend class Iterator
+-struct Node
+
+In the struct Node I used variables: bf- balance factor and height-which denotes the height od the tree. It was useful in making “remove” and “add” operations with proper rebalance of the tree. 
+
+###### Functions
+There are two functions “add”(“remove”). However they are not the same cause they require different parameters. When we want to add(remove) element, first I check if such element already exists on the list(was already removed).  If yes(no) it cannot be added cause key’s are unique. In such case I throw an exception comment. In another case, I call an another “add”(“remove”) function inside this first one. 
+
+###### Tests
+I divided my test into sections. If any errors occur then it will be printed on standard error stream (cerr). To check if nodes properly balance after operations I created a function print to visualize the tree and check if nodes are in proper relations. 
