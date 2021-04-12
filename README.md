@@ -1,5 +1,5 @@
 # EADS
-## Algorithms &amp; Data Structures course projects
+Algorithms &amp; Data Structures course projects
 
 ## Project 1 
 Single-linked list of elements. Elements store information about two different data types (integer “key” and character “info”). The main purpose of the task was to design a function “Split” which divides one single-linked list, into two separate lists under set conditions. 
